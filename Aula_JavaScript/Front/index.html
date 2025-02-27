@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Olá, Mundo!</title>
+</head>
+<body>
+    <h1>Teste de "Function e Document" em JavaScript</h1>
+    <br>
+    <button onclick="mudarNome()">
+        <h2 id="nome">Clique aqui e mude seu nome</h2>
+    </button>
+    <script>
+        let nome = "João";
+        function mudarNome(){
+            if(nome=="João"){
+                nome = "Victor";
+            }else{
+                nome = "João";
+            }
+            document.getElementById("nome").textContent = "Olá "+nome;
+        }
+    </script>
+</body>
+</html>
