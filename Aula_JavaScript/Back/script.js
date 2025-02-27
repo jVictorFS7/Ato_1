@@ -1,4 +1,6 @@
+//Cria uma variavel nome com o valor em aspas
 let nome = "Usando entrada de usuário";
+//Adiciona a variavel nome no elemento com id subtitulo, exibindo assim seu valor
 document.getElementById("subtitulo").textContent = ""+nome;
 
 function adicionarValor(){
