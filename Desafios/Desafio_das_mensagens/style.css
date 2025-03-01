@@ -1,0 +1,10 @@
+#botoes{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.bot{
+    margin-left: 15px;
+    padding: 30px;
+    font-size: large;
+}
