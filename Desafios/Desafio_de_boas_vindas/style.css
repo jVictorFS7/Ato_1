@@ -1,0 +1,14 @@
+#Boas-Vindas{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#botao{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.botaoDesafio{
+    padding: 30px;
+    font-size: 30px;
+}
