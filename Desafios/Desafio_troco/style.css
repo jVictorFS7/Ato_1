@@ -1,0 +1,14 @@
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botao{
+    padding: 30px;
+    font-size: 30px;
+}
