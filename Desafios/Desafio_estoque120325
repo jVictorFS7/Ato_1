@@ -1,0 +1,134 @@
+let sair = "n";
+let estoque = [];
+
+do{
+    let produto = prompt("informe um produto\n");
+    console.log("-----------------------------");
+    estoque.push(produto);
+    sair = prompt("deseja sair?(s ou n)\n");
+    console.log("-----------------------------");
+    if(sair != "n" && sair != "s"){
+        sair = "n";
+    }
+}while(sair == "n");
+
+
+console.log("Todos os produtos adicionados");
+for(let i = 0; i < estoque.length; i++){
+    let nomeProduto = estoque[i];
+    console.log(nomeProduto);
+}
+console.log("-----------------------------");
+let opcao = "";
+
+
+do{
+     opcao = prompt("deseja remover algum produto?(s ou n)\n");
+     if(opcao != "s" && opcao != "n"){
+        opcao = "n";
+     }else if(opcao == "s"){
+        let remover = prompt("qual o nome do produto que deseja remover?\n");
+        let indice = estoque.indexOf(remover);
+        estoque.splice(indice, 1);
+        console.log("-----------------------------");
+        console.log("Todos os produtos restantes");
+        for(let i = 0; i < estoque.length; i++){
+        let nomeProduto = estoque[i];
+        console.log(nomeProduto);
+        }
+        console.log("-----------------------------");
+        opcao = "n";
+     }else{
+        opcao = "s";
+        console.log("-----------------------------");
+        console.log("Todos os produtos finais");
+        for(let i = 0; i < estoque.length; i++){
+        let nomeProduto = estoque[i];
+        console.log(nomeProduto);
+        }
+     }
+}while(opcao == "n");
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+let menu = "";
+let lista = [];
+let k = 0;
+for(k = 0; k < 1; k--){
+do{
+    console.log("Escolha uma das seguintes operações que deseja fazer\n");
+    menu = prompt("(1)Adicionar Produto\n(2)Remover Produto\n(3)Listar Produto\n(0)Para cancelar\n");
+    if(menu != 1 && menu !=2 && menu != 3 && menu != 0){
+        menu = "continuar";
+    }
+}while(menu == "continuar");
+
+let sair = "";
+
+console.log("------------------------------------------")
+
+switch(menu){
+    case "1": 
+    do{
+        let produto = prompt("Qual produto você deseja adicionar?\n");
+        console.log("------------------------------------------");
+        lista.push(produto);
+        sair = prompt("Deseja adicionar mais produtos? ('s' para sim e 'n' para não)\n");
+        console.log("------------------------------------------");
+        if(sair != "s" && sair != "n"){
+            sair = s;
+        }
+    }while(sair == "s");
+    console.log("Aqui estão os produtos adicionados\n");
+    for(let i = 0; i < lista.length; i++){
+        console.log(lista[i]);
+    }
+    console.log("------------------------------------------");
+    break;
+
+    case "2":
+    if(lista.length == 0){
+        console.log("Não há produtos adicionados");
+        console.log("------------------------------------------");
+    }else{
+        console.log("Lista de produtos em estoque");
+        for(let i = 0; i < lista.length; i++){
+        console.log(lista[i]);
+        }
+        console.log("------------------------------------------");
+        do{
+            let remover = prompt("Qual produto você gostaria de remover?\n");
+            let indice = lista.indexOf(remover);
+            lista.splice(indice, 1);
+            console.log("------------------------------------------");
+            sair = prompt("Deseja cancelar a operação?('s' para sim e 'n' para não)\n");
+            if(sair != "s" && sair != "n"){
+                sair = "n";
+            }
+        }while(sair == "n");
+        console.log("------------------------------------------");
+        console.log("Aqui estão os produtos adicionados\n");
+        for(let i = 0; i < lista.length; i++){
+        console.log(lista[i]);
+        }
+        console.log("------------------------------------------");
+    }
+    break;
+
+    case "3":
+        if(lista.length == 0){
+        console.log("Não há produtos adicionados");
+        console.log("------------------------------------------");
+        }else{
+            console.log("Aqui estão os produtos adicionados\n");
+            for(let i = 0; i < lista.length; i++){
+            console.log(lista[i]);
+            }
+        }
+        console.log("------------------------------------------");
+    break;
+    case "0":
+    k = 2;
+}
+}
+console.log("Operação finalizada");
