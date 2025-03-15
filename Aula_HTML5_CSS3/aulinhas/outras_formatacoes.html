@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h2>Código-fonte</h2>
+    <!--<code> para criar fontes monoespaçadas / <pre> para formatar de maneira que considere o texto exatamente como está na página HTML-->
+    <p>O comando <code>document.getElementById("conteudo")</code> é escrito em JavaScript</p>
+    <pre>
+        <code>
+            <p>
+    const veiculo = ["corsa", "palio", "monza"];
+    for(let i = 0; i < veiculo.length; i++){
+        console.log(veiculo[i]);
+    }
+                corsa
+                palio
+                monza
+            </p>
+        </code>
+    </pre>
+    <p>Uso do &lt;q&gt; para destacar citações <q>O uso de lâmpadas gera empregos</q></p>
+    <p>Segundo Fulano em seu livro nunca nem vi:</p>
+    <!-- 'cite' para que os mecanismos de busca do google saiba de onde vem a citação-->
+    <blockquote cite="www.google.com.br">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis facere deleniti vel hic labore numquam delectus rerum adipisci ipsum debitis, quisquam, eligendi quia cumque natus aut quasi expedita eum distinctio!
+    </blockquote>
+    <p>Expandindo meus conhecimentos em <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+    <!-- rtl ou ltr para tags invertidas-->
+    <p><bdo dir="rtl">Texto invertido</bdo></p>
+</body>
+</html>
